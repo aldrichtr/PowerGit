@@ -1,23 +1,9 @@
-*.pdb
-packages/
-Carbon/
-Silk/
-Pester/
-Modules
-get-libgit2.org/
-*.suo
-**/bin/**
-**/obj/**
-Output/
-**/*.user
-.output
-.vs
-/node_modules/
-/Screenshots/frames/
-.DS_Store
+## PowerGit Project Exclusions
 
-# TODO figure out where these come from
-/PowerGit/Assemblies
-/Assemblies
-/out
-/fubar
+source/PowerGit/bin
+
+stage
+
+out
+
+**/obj
