@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+  <PropertyGroup Label="Project directories">
+    <RootDirectory>$([MSBuild]::NormalizeDirectory($(MSBuildThisFileDirectory)))</RootDirectory>
+    <SourceDirectory>$([MSBuild]::NormalizeDirectory($(RootDirectory)source/$(MSBuildProjectName)))</SourceDirectory>
+    <ArtifactDirectory>$([MSBuild]::NormalizeDirectory($(RootDirectory)out/$(MSBuildProjectName)))</ArtifactDirectory>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Output Locations">
+    <BaseIntermediateOutputPath>$(ArtifactDirectory)</BaseIntermediateOutputPath>
+    <OutDir>$([MSBuild]::NormalizeDirectory($(SourceDirectory)bin))</OutDir>
+    <PublishDir>$(OutDir)</PublishDir>
+
+  </PropertyGroup>
+</Project>

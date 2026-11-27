@@ -1,17 +1,27 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+  <PropertyGroup Label="Project Globals">
+    <TargetFramework>net10.0</TargetFramework>
+    <Configuration>Release</Configuration>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="LibGit2Sharp" Version="0.26.2" />
-    <PackageReference Include="LibGit2Sharp.NativeBinaries" Version="2.0.306" GeneratePathProperty="true" />
-  </ItemGroup>
+  <PropertyGroup Label="Output Control">
+    <!-- Do not write a .pdb file -->
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <!-- Do not write .deps.json -->
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+  </PropertyGroup>
 
-  <ItemGroup>
-    <Content Include="$(PkgLibGit2Sharp_NativeBinaries)\runtimes\**\*" CopyToOutputDirectory="PreserveNewest" />
+  <ItemGroup Label="Dependencies">
+    <PackageReference Include="LibGit2Sharp" Version="0.32" />
+    <PackageReference Include="LibGit2Sharp.NativeBinaries" Version="2.0.324" />
   </ItemGroup>
-
 </Project>
